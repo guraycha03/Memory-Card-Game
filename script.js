@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "assets/images/fairy.png"
     ];
 
-    let cardValues = [...imagePaths, ...imagePaths];
+    let cardValues = [...imagePaths, ...imagePaths]; // Duplicate for pairs
     let flippedCards = [];
     let matchedCards = [];
     let startTime;
@@ -47,9 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("card");
             card.dataset.value = value;
 
+            const cardInner = document.createElement("div");
+            cardInner.classList.add("card-inner");
+
+            const cardFront = document.createElement("div");
+            cardFront.classList.add("card-front");
+
+            const cardBack = document.createElement("div");
+            cardBack.classList.add("card-back");
             const img = document.createElement("img");
             img.src = value;
-            card.appendChild(img);
+            cardBack.appendChild(img);
+
+            cardInner.appendChild(cardFront);
+            cardInner.appendChild(cardBack);
+            card.appendChild(cardInner);
 
             card.addEventListener("click", flipCard);
             gameBoard.appendChild(card);
@@ -76,9 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (flippedCards[0].dataset.value === flippedCards[1].dataset.value) {
             matchedCards.push(...flippedCards);
         } else {
-            flippedCards.forEach(card => {
-                card.classList.remove("flipped");
-            });
+            flippedCards.forEach(card => card.classList.remove("flipped"));
         }
         flippedCards = [];
         if (matchedCards.length === cardValues.length) {
