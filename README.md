@@ -1,6 +1,5 @@
-# Memory-Card-Game
-A simple Memory Matching Game built using HTML, CSS, and JavaScript.
-
+# 🃏 Memory-Card-Game
+A simple memory-matching card game built with HTML, CSS, and JavaScript.
 Features
 - 12 shuffled cards (6 pairs of images)
 - Start button (timer starts when clicked)
@@ -8,4 +7,4 @@ Features
 - Confetti celebration 🎉 when all pairs are matched
 - Timer stops when completed
 
-This project uses images that are free to download and use from Pixabay.
+The images used in this project are free to download and use from [Pixabay](https://pixabay.com/).
