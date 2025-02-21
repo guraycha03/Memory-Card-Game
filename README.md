@@ -7,3 +7,5 @@ Features
 - Restart button (resets timer & reshuffles)
 - Confetti celebration 🎉 when all pairs are matched
 - Timer stops when completed
+
+This project uses images that are free to download and use from Pixabay.
